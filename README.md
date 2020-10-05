@@ -1,8 +1,6 @@
 # Spring Bean Composition
 
-[Tests](./src/test/java/andkudr/bean/composition/)
-
-**First bean**
+## First bean
 ```java
 public interface Adder {
 
@@ -21,7 +19,7 @@ public class AdderImpl implements Adder {
 }
 ```
 
-**Second bean**
+## Second bean
 ```java
 public interface Subtractor {
     int subtract(int a, int b);
@@ -39,14 +37,14 @@ public class SubtractorImpl implements Subtractor {
 }
 ```
 
-**Composed bean**
+## Composed bean
 ```java
 @Composed
 public interface Calculator extends Adder, Subtractor {
 }
 ```
 
-**Usage**
+## Usage
 ```java
 @SpringBootTest(classes = {SingletonConfig.class})
 public class SingletonTest {
@@ -65,3 +63,5 @@ public class SingletonTest {
     }
 }
 ```
+
+[Examples](./src/test/java/andkudr/bean/composition/)
